@@ -2,7 +2,8 @@ const cors = require('cors');
 require('dotenv').config()
 const express = require('express');
 const app = express();
-const port = 4000;
+const host = '0.0.0.0';
+const port = process.env.PORT || 3000;
 const mongoose = require('mongoose');
 const Task = require('./Task');
 
@@ -59,6 +60,6 @@ app.delete('/:id', (req, res) => {
 })
 
 
-app.listen(port, () => {
+app.listen(port, host, () => {
     console.log("Server running on port " + port);
 })
