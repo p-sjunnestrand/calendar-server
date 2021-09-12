@@ -6,7 +6,9 @@ const port = 4000;
 const mongoose = require('mongoose');
 const Task = require('./Task');
 
-app.use(cors());
+app.use(cors({
+    origin: "http://localhost:3000"
+}));
 // app.options('*', cors())
 app.use(express.json());
 app.use(express.urlencoded({extended: true}))
