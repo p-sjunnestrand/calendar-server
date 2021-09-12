@@ -1,13 +1,13 @@
+const cors = require('cors');
 require('dotenv').config()
 const express = require('express');
 const app = express();
 const port = 4000;
 const mongoose = require('mongoose');
-const cors = require('cors');
 const Task = require('./Task');
 
-// app.use(cors());
-app.options('*', cors())
+app.use(cors());
+// app.options('*', cors())
 app.use(express.json());
 app.use(express.urlencoded({extended: true}))
 
