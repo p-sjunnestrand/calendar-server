@@ -10,7 +10,7 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({extended: true}))
 
-mongoose.connect(process.env.DB_CLOUD, {
+mongoose.connect('mongodb+srv://petterAdmin:gtnafyHN8WpQWfRB@rootcluster.d4txc.mongodb.net/rootCluster?retryWrites=true&w=majority', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 }, () => {
@@ -54,6 +54,7 @@ app.delete('/:id', (req, res) => {
         console.log(err)
     }
 })
+
 
 app.listen(port, () => {
     console.log("Server running on port " + port);
