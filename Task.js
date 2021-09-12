@@ -1,8 +1,9 @@
 const mongoose = require('mongoose');
 
 const task = new mongoose.Schema({
+    sortDate: Number,
     task: String,
-    date: mongoose.Schema.Types.Mixed,
+    day: String,
 })
 
 module.exports = mongoose.model("Task", task);
