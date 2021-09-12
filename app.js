@@ -8,7 +8,7 @@ const mongoose = require('mongoose');
 const Task = require('./Task');
 
 app.use(cors({
-    origin: "https://sjunnestrand-calendar-front.herokuapp.com/"
+    origin: "https://sjunnestrand-calendar-front.herokuapp.com"
 }));
 // app.options('*', cors())
 app.use(express.json());
